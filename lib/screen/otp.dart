@@ -110,14 +110,15 @@ class _OtpScreenState extends State<OtpScreen> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.only(left: 65,right: 65),
+                          // ignore: missing_required_param
                           child: PinCodeTextField(
+                            appContext: context,
                             backgroundColor: Colors.black,
                             length: 4,
                             textStyle: TextStyle(
                               color: Colors.white
                             ),
-                            textInputType: TextInputType.phone,
-                            obsecureText: false,
+
                             autoDismissKeyboard: true,
                             animationType: AnimationType.fade,
                             validator: (text){

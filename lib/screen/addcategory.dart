@@ -59,7 +59,11 @@ class _AddCategoryState extends State<AddCategory> {
             fontSize: 17*MediaQuery.of(context).textScaleFactor,
             fontWeight: FontWeight.normal
           ),),
-          leading: Icon(Icons.arrow_back,color: Colors.white,),
+          leading: InkWell(
+              onTap: (){
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back,color: Colors.white,)),
         ),
       body: SingleChildScrollView(
         child: Container(
